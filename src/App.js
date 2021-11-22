@@ -8,7 +8,7 @@ import 'firebase/analytics'
 
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { useCollectionData } from 'react-firebase-hooks/firestore'
-import translateText from './translate'
+// import translateText from './translate'
 
 firebase.initializeApp({
   apiKey: 'AIzaSyAkSivI_GML2B0gVtiHUoWgAWm5gqv4nCE',
@@ -21,7 +21,7 @@ firebase.initializeApp({
 
 const auth = firebase.auth()
 const firestore = firebase.firestore()
-const analytics = firebase.analytics()
+// const analytics = firebase.analytics()
 
 function App() {
   const [user] = useAuthState(auth)
@@ -151,6 +151,7 @@ function ChatMessage(props) {
         <img
           style={{ cursor: 'pointer' }}
           onClick={() => setShowText(!showText)}
+          alt="avatar"
           src={
             photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'
           }
