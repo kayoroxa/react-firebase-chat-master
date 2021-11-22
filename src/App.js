@@ -102,6 +102,9 @@ function ChatRoom() {
   useEffect(() => {
     if (messages) {
       const message = messages.slice(-1)[0]
+      if (!message) {
+        return
+      }
       const messageClass =
         message.uid === auth.currentUser.uid ? 'sent' : 'received'
 
